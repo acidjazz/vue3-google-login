@@ -35,7 +35,7 @@ export const decodeCredential: types.DecodeCredential = (
 
 export const loadGApi = new Promise<types.Google>((resolve) => {
   if (!libraryState.apiLoadIntitited) {
-    const script = document.createElement("script");
+    const script = document?.createElement("script");
     libraryState.apiLoadIntitited = true;
     script.addEventListener("load", () => {
       libraryState.apiLoaded = true;
